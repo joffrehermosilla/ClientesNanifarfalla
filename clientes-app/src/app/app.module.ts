@@ -7,6 +7,9 @@ import {FooterComponent} from './footer/footer.component';
 import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ShepherdComponent } from './shepherd/shepherd.component';
+import { ClienteService } from './clientes/cliente.service';
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import { ShepherdComponent } from './shepherd/shepherd.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
