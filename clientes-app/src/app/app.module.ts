@@ -8,7 +8,13 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ShepherdComponent } from './shepherd/shepherd.component';
 import { ClienteService } from './clientes/cliente.service';
+import { RouterModule, Routes} from '@angular/router';
 
+const routes: Routes =[
+ {path: '',redirectTo: '/clientes', pathMatch:'full'},
+ {path: 'directivas', component:DirectivaComponent},
+  {path: 'clientes', component:ClientesComponent}
+];
 
 
 @NgModule({
@@ -21,7 +27,8 @@ import { ClienteService } from './clientes/cliente.service';
     ShepherdComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
   bootstrap: [AppComponent]
